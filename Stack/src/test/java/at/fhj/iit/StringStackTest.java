@@ -79,4 +79,18 @@ public class StringStackTest
         assertEquals("Jakob", s.pop());
         assertEquals(true, s.isEmpty());
     }
+
+    @Test(expected = IllegalStateException.class)
+    public void testSimon1() throws Exception
+    {
+        s.push("Hallo");
+        s.push("ich");
+        s.push("bin");
+        s.push("der");
+        s.push("Simon");
+        s.push("und");
+        s.push("teste");
+        s.push("eine");
+        s.push("Exception");
+    }
 }
