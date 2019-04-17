@@ -3,11 +3,13 @@ package at.fhj.iit;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Stack;
+
 import static org.junit.Assert.assertEquals;
 
 public class StringStackTest
 {
-    public Stack s;
+    public StringStack s;
     
     @Before
     public void setup() throws Exception
@@ -65,5 +67,16 @@ public class StringStackTest
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
-    
+
+    @Test
+    public void testJakob1() throws Exception
+    {
+        s.push("Jakob");
+        assertEquals(false, s.isEmpty());
+        s.push("Simon");
+        assertEquals("Simon", s.pop());
+        assertEquals(false, s.isEmpty());
+        assertEquals("Jakob", s.pop());
+        assertEquals(true, s.isEmpty());
+    }
 }
