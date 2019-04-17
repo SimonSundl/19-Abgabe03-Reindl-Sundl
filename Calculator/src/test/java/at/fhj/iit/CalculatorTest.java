@@ -1,6 +1,6 @@
 package at.fhj.iit;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -64,7 +64,11 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testMultiply() {
+		// EXERCISE PHASE
+		double value = calc.multiply(2, 4);
 
+		// VERIFY PHASE
+		assertEquals(8, value, 0.001);
 	}
 
 	/**
@@ -74,7 +78,11 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testDivide() {
+		// EXERCISE PHASE
+		double value = calc.divide(10, 5);
 
+		// VERIFY PHASE
+		assertEquals(2, value, 0.001);
 	}
 
 
