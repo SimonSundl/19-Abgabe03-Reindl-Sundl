@@ -68,7 +68,14 @@ public class Point3dTest {
 	 */
 	@Test
 	public void testDistanceFrom(){
+		p3D.setX(2);
+		p3D.setY(2);
+		p3D.setZ(2);
 
+		Point3d point = new Point3d(1, 1, 1);
+		double value = p3D.distanceFrom(point);
+
+		assertEquals(1.7, value, 0.1);
 	}
 
 	/**
@@ -79,5 +86,11 @@ public class Point3dTest {
 	 */
 	@Test
 	public void testDistanceFromOrigin(){
+		p3D.setX(1);
+		p3D.setY(1);
+		p3D.setZ(2);
+		double value = p3D.distanceFromOrigin();
+
+		assertEquals(2.4, value, 0.1);
 	}
 }
