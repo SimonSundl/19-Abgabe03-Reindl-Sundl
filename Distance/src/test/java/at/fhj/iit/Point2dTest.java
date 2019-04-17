@@ -42,6 +42,9 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testSetY(){
+		p2D.setY(6);
+
+		assertEquals(6, p2D.getY(), 0.001);
 	}
 
 
@@ -53,6 +56,14 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testDistanceFrom(){
+		p2D.setX(2);
+		p2D.setY(2);
+
+		Point2d point = new Point2d(1, 1);
+		double value = p2D.distanceFrom(point);
+
+		assertEquals(1.4142, value, 0.01);
+
 	}
 
 	/**
@@ -63,5 +74,10 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testDistanceFromOrigin(){
+		p2D.setX(1);
+		p2D.setY(1);
+		double value = p2D.distanceFromOrigin();
+
+		assertEquals(1.4, value, 0.1);
 	}
 }
